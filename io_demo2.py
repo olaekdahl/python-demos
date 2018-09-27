@@ -5,7 +5,7 @@ input_file = "test.txt"
 current_dir = __file__ #remove filename
 current_dir = current_dir.replace("io_demo2.py",input_file)
 # file_name = current_dir + "\\" + input_file
-
+# test
 with open(current_dir, "r") as file:
     for line in file.readlines():
         print(line.replace("\n",""))
