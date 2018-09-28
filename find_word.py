@@ -20,7 +20,7 @@ while True:
     file_date = date(dt.year, dt.month, dt.day)
 
     try:
-        
+
         onlyfiles = [f for f in listdir(path) if isfile(join(path, f))]
         break
     except FileNotFoundError as e:
@@ -50,10 +50,8 @@ for file in onlyfiles:
                 for line in data:
                     if search_word in line:
                         word_counter += 1
-            file_info = [file.name, word_counter]
-            matching_files.append(file_info)
-    else:
-        print(file, " does not match input date.")
+                file_info = [file.name, word_counter]
+                matching_files.append(file_info)
 
 print("Matching files:")
 print("Total number of matching files: ", len(matching_files))
